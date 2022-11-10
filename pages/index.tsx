@@ -1,9 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Navigation from '../components/Navigation'
 
 const Home: NextPage = () => {
-  return (
+  return (<>
+      <Navigation></Navigation>
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
         <title>Create Next App</title>
@@ -80,6 +82,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
+  </>
   )
 }
 
