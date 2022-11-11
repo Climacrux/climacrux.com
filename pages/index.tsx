@@ -4,10 +4,12 @@ import Image from 'next/image'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import CardList from '../components/CardList'
+import HeroSection from '../components/HeroSection'
 
 const Home: NextPage = () => {
   return (<>
       <Navigation></Navigation>
+      <HeroSection></HeroSection>
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
         <title>Create Next App</title>
