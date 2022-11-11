@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import CardList from '../components/CardList'
 
 const Home: NextPage = () => {
   return (<>
@@ -69,6 +70,7 @@ const Home: NextPage = () => {
             </p>
           </a>
         </div>
+        <CardList></CardList>
       </main>
       <footer className="flex h-24 w-full items-center justify-center border-t">
         <a
