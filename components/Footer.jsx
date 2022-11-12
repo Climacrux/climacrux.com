@@ -1,6 +1,7 @@
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import ClimacruxLogo from "../images/climacrux_logo_gray.svg";
+import { TallyForm } from "./TallyForm";
 
 const navigation = {
   solutions: [
@@ -125,6 +126,16 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-200 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
+          <TallyForm
+            className="mt-8"
+            title="Newsletter Form"
+            tallySrc="https://tally.so/embed/3Ek5VA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          />
+          <p className="prose text-slate-400 prose-a:font-semibold prose-a:text-sky-400 prose-a:no-underline prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.sky.800))] hover:prose-a:[--tw-prose-underline-size:6px]">
+            By signing up you agree to the processing of your data as specified
+            in our <Link href="/privacy-policy">Privacy Policy </Link> including
+            - but not limited to - receiving the Climacrux LLC newsletter.
+          </p>
           <div>
             <h3 className="text-base font-medium text-slate-900">
               Subscribe to our newsletter
