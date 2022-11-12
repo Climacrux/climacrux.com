@@ -1,6 +1,7 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 import { useState } from "react";
+import ClimacruxLogo from "../images/climacrux_logo_gray.svg";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -22,11 +23,7 @@ const Navigation = () => {
           <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
+              <ClimacruxLogo className="h-8" />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -68,11 +65,7 @@ const Navigation = () => {
               <div className="flex">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
+                  <ClimacruxLogo className="h-8" />
                 </a>
               </div>
               <div className="flex">

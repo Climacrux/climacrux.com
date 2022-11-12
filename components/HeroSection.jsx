@@ -48,12 +48,12 @@ export default function HeroSection() {
               </div>
               <div>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                  Data to enrich your online business
+                  Imagine a net‑zero future
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
+                  Action needs to be taken today to transition to a more
+                  sustainable, net-zero emissions society. Climacrux creates
+                  products and services to accelerate this process.
                 </p>
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                   <a
