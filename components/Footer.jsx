@@ -125,56 +125,24 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-200 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
+        <div className="border-t border-gray-200 pt-8 lg:flex lg:flex-col lg:items-center lg:justify-between xl:mt-0">
+          <h3 className="text-base font-medium text-slate-900 uppercase">
+            Connect with us
+          </h3>
           <TallyForm
-            className="mt-8"
+            className="mt-4"
             title="Newsletter Form"
-            tallySrc="https://tally.so/embed/3Ek5VA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            tallySrc="https://tally.so/embed/wArvNz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
           />
-          <p className="prose text-slate-400 prose-a:font-semibold prose-a:text-sky-400 prose-a:no-underline prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.sky.800))] hover:prose-a:[--tw-prose-underline-size:6px]">
+          <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
             By signing up you agree to the processing of your data as specified
-            in our <Link href="/privacy-policy">Privacy Policy </Link> including
-            - but not limited to - receiving the Climacrux LLC newsletter.
+            in our{" "}
+            <Link className="font-semibold no-underline" href="/privacy-policy">
+              Privacy Policy{" "}
+            </Link>{" "}
+            including - but not limited to - receiving the Climacrux LLC
+            newsletter.
           </p>
-          <div>
-            <h3 className="text-base font-medium text-slate-900">
-              Subscribe to our newsletter
-            </h3>
-            <p className="mt-2 text-base text-gray-400">
-              By signing up you agree to the processing of your dta as specified
-              in our{" "}
-              <Link
-                className="text-base text-gray-500 hover:text-gray-900"
-                href="/privacy-policy"
-              >
-                Privacy Policy
-              </Link>{" "}
-              including - but not limited to - receiving the Climacrux LLC
-              newsletter.
-            </p>
-          </div>
-          <form className="mt-4 sm:flex sm:max-w-md lg:mt-0">
-            <label htmlFor="email-address" className="sr-only">
-              Email address
-            </label>
-            <input
-              type="email"
-              name="email-address"
-              id="email-address"
-              autoComplete="email"
-              required
-              className="w-full min-w-0 appearance-none rounded-md border border-gray-300 bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-indigo-500 sm:max-w-xs"
-              placeholder="Enter your email"
-            />
-            <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
         </div>
         <div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
