@@ -1,5 +1,6 @@
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import ClimacruxLogo from "../images/climacrux_logo_gray.svg";
 
 const navigation = {
   solutions: [
@@ -67,75 +68,60 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="pb-8 xl:grid xl:grid-cols-5 xl:gap-8">
-          <div className="grid grid-cols-2 gap-8 xl:col-span-4">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-base font-medium text-gray-900">
-                  Solutions
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-gray-900">Support</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-base font-medium text-gray-900">Company</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-gray-900">Legal</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
+          <div>
+            <a target="_blank" href="https://climacrux.com/">
+              <ClimacruxLogo className="max-h-12" />
+            </a>
+            <p className="text-base text-gray-400 md:order-1">
+              Climacrux is a company aiming to help fight the climate crisis by
+              making carbon removal more accessible.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-base font-medium text-gray-900 uppercase">
+              Imprint
+            </h3>
+            <p className="text-base text-gray-400">
+              Climacrux GmbH
+              <br />
+              St.Niklausenstrasse
+              <br />
+              6047 Kastanienbaum
+              <br />
+              Switzerland
+              <br />
+              <a
+                className="text-base text-gray-500 hover:text-gray-900"
+                href="mailto:hello@climacrux.com"
+              >
+                hello@climacrux.com
+              </a>
+            </p>
+          </div>
+          <div>
+            <h3 className="text-base font-medium text-gray-900 uppercase">
+              Legal
+            </h3>
+            <ul>
+              <li>
+                <Link
+                  className="text-base text-gray-500 hover:text-gray-900"
+                  href="/terms-and-conditions"
+                >
+                  Terms and Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-base text-gray-500 hover:text-gray-900"
+                  href="/privacy-policy"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="border-t border-gray-200 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
@@ -143,11 +129,11 @@ export default function Footer() {
             <h3 className="text-base font-medium text-slate-900">
               Subscribe to our newsletter
             </h3>
-            <p className="mt-2 text-base text-slate-700">
+            <p className="mt-2 text-base text-gray-400">
               By signing up you agree to the processing of your dta as specified
               in our{" "}
               <Link
-                className="font-semibold text-slate-900 underline hover:text-sky-500"
+                className="text-base text-gray-500 hover:text-gray-900"
                 href="/privacy-policy"
               >
                 Privacy Policy
@@ -185,7 +171,7 @@ export default function Footer() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-400 hover:text-gray-500"
+                className="text-base text-gray-500 hover:text-gray-900"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -193,7 +179,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
-            &copy; 2022 Climacrux LLC, All rights reserved.
+            &copy; 2022 Climacrux, Ltd. All rights reserved.
           </p>
         </div>
       </div>
