@@ -1,6 +1,10 @@
+
+const withMarkdoc = require('@markdoc/next.js');
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'tsx', 'md'],
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -11,3 +15,5 @@ module.exports = {
     return config
   },
 }
+
+module.exports = withMarkdoc()(nextConfig);
