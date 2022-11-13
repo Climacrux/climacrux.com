@@ -3,15 +3,17 @@ import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import clsx from "clsx";
 
-function useTableOfContents(tableOfContents) {
+function useTableOfContents(tableOfContents: any[]) {
   let [currentSection, setCurrentSection] = useState(tableOfContents[0]?.id);
 
-  let getHeadings = useCallback((tableOfContents) => {
+  let getHeadings = useCallback((tableOfContents: any[]): any[] => {
     return tableOfContents
-      .flatMap((node) => [node.id, ...node.children.map((child) => child.id)])
+      .flatMap((node) => [
+        node.id,
+        ...node.children.map((child: any) => child.id),
+      ])
       .map((id) => {
         let el = document.getElementById(id);
         if (!el) return;
@@ -42,18 +44,27 @@ function useTableOfContents(tableOfContents) {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => {
-      window.removeEventListener("scroll", onScroll, { passive: true });
+      window.removeEventListener("scroll", onScroll);
     };
   }, [getHeadings, tableOfContents]);
 
   return currentSection;
 }
 
-const Layout = ({ children, title, tableOfContents }) => {
-  let router = useRouter();
+type LayoutProps = {
+  children: any;
+  title: string;
+  tableOfContents: any[];
+};
+
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title,
+  tableOfContents,
+}) => {
   let currentSection = useTableOfContents(tableOfContents);
 
-  const isActive = (section) => {
+  const isActive = (section: any) => {
     if (section.id === currentSection) {
       return true;
     }
@@ -109,7 +120,7 @@ const Layout = ({ children, title, tableOfContents }) => {
                           role="list"
                           className="mt-2 space-y-3 pl-5 text-slate-500"
                         >
-                          {section.children.map((subSection) => (
+                          {section.children.map((subSection: any) => (
                             <li key={subSection.id}>
                               <Link
                                 href={`#${subSection.id}`}

@@ -1,6 +1,20 @@
 import { useEffect } from "react";
 
-const TallyForm = (props) => {
+type FormProps = {
+  tallySrc: string;
+  className: string;
+  height: string;
+  title: string;
+};
+
+/**
+ * Dirty typing for Tally coming from javascript import.
+ */
+abstract class Tally {
+  static loadEmbeds = () => {};
+}
+
+const TallyForm = (props: FormProps) => {
   useEffect(() => {
     let d = document,
       w = "https://tally.so/widgets/embed.js",
@@ -9,7 +23,7 @@ const TallyForm = (props) => {
           ? Tally.loadEmbeds()
           : d
               .querySelectorAll("iframe[data-tally-src]:not([src])")
-              .forEach(function (e) {
+              .forEach(function (e: any) {
                 e.src = e.dataset.tallySrc;
               });
       };
@@ -26,8 +40,8 @@ const TallyForm = (props) => {
       width="100%"
       height={props.height || "100%"}
       frameBorder="0"
-      marginHeight="0"
-      marginWidth="0"
+      marginHeight={0}
+      marginWidth={0}
       title={props.title}
     ></iframe>
   );

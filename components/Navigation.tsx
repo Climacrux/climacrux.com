@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import ClimacruxLogo from "../images/climacrux_logo_gray.svg";
 import clsx from "clsx";
 
-const navigation = [
+interface NavigationItem {
+  name: string;
+  href: string;
+}
+
+const navigation: NavigationItem[] = [
   // { name: "Product", href: "#" },
   // { name: "Features", href: "#" },
   // { name: "Marketplace", href: "#" },
@@ -83,7 +88,7 @@ const Navigation = () => {
       </nav>
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Panel
-          focus="true"
+          // focus="true"
           className="fixed inset-0 z-10 overflow-y-auto bg-white px-4 py-5 lg:hidden"
         >
           <div className="flex h-9 lg:px-8 items-center justify-between">
