@@ -66,7 +66,7 @@ const Layout = ({ children, title, tableOfContents }) => {
   return (
     <>
       <Navigation></Navigation>
-      <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
+      <div className="relative container mx-auto flex justify-center sm:px-2 lg:px-8 xl:px-12">
         <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
           <article>
             {title && (
@@ -97,7 +97,7 @@ const Layout = ({ children, title, tableOfContents }) => {
                           href={`#${section.id}`}
                           className={clsx(
                             isActive(section)
-                              ? "text-sky-500"
+                              ? "text-emerald-500"
                               : "font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
                           )}
                         >
@@ -115,7 +115,7 @@ const Layout = ({ children, title, tableOfContents }) => {
                                 href={`#${subSection.id}`}
                                 className={
                                   isActive(subSection)
-                                    ? "text-sky-500"
+                                    ? "text-emerald-500"
                                     : "hover:text-slate-600 dark:hover:text-slate-300"
                                 }
                               >

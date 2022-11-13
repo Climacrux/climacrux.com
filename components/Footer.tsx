@@ -41,22 +41,21 @@ const navigation = {
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t" aria-labelledby="footer-heading">
+    <footer
+      className="mx-auto container sm:px-2 lg:px-8 xl:px-12 bg-white border-t mt-8 pb-8"
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
-          <div>
-            <a target="_blank" href="https://climacrux.com/">
-              <ClimacruxLogo className="max-h-12" />
-            </a>
-            <p className="text-base text-gray-400 md:order-1">
-              Climacrux is a company aiming to help fight the climate crisis by
-              making carbon removal more accessible.
-            </p>
-          </div>
-          <div>
+      <div className="px-4 sm:px-6 lg:px-8 pt-8">
+        <a target="_blank" href="https://climacrux.com/">
+          <ClimacruxLogo className="max-h-12" />
+        </a>
+      </div>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-10 gap-6 py-8">
+          <div className="md:col-span-3">
             <h3 className="text-base font-medium text-gray-900 uppercase">
               Imprint
             </h3>
@@ -70,7 +69,7 @@ const Footer = () => {
               Switzerland
               <br />
             </p>
-            <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
+            <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.emerald.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
               <Link
                 className="font-semibold no-underline"
                 href="mailto:hello@climacrux.com"
@@ -79,13 +78,13 @@ const Footer = () => {
               </Link>
             </p>
           </div>
-          <div>
+          <div className="md:col-span-3">
             <h3 className="text-base font-medium text-gray-900 uppercase">
               Legal
             </h3>
             <ul>
               <li>
-                <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
+                <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.emerald.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
                   <Link
                     className="font-semibold no-underline"
                     href="/privacy-policy"
@@ -95,7 +94,7 @@ const Footer = () => {
                 </p>
               </li>
               <li>
-                <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
+                <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.emerald.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
                   <Link
                     className="font-semibold no-underline"
                     href="/terms-and-conditions"
@@ -106,6 +105,12 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          <div className="md:col-span-4">
+            <p className="text-base text-gray-400 md:order-1">
+              Climacrux is a company aiming to help fight the climate crisis by
+              making carbon removal more accessible.
+            </p>
+          </div>
         </div>
         <div className="border-t border-gray-200 pt-8 lg:flex lg:flex-col lg:items-center lg:justify-between xl:mt-0">
           <h3 className="text-base font-medium text-slate-900 uppercase">
@@ -115,8 +120,9 @@ const Footer = () => {
             className="mt-4"
             title="Newsletter Form"
             tallySrc="https://tally.so/embed/wArvNz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            height="200px"
           />
-          <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
+          <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.emerald.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
             By signing up you agree to the processing of your data as specified
             in our{" "}
             <Link className="font-semibold no-underline" href="/privacy-policy">

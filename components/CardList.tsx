@@ -1,7 +1,7 @@
 const posts = [
   {
     title: "Carbon Removed",
-    subtitle: "CO₂ removal for individuals",
+    subtitle: "Subscriptions & one-time for individuals",
     href: "https://carbonremoved.com/",
     category: { name: "carbonremoved.com", href: "https://carbonremoved.com/" },
     description:
@@ -10,8 +10,8 @@ const posts = [
       "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
   },
   {
-    title: "CDR Platform API",
-    subtitle: "CO₂ removal as a service",
+    title: "CDR Platform",
+    subtitle: "CO₂ removal API",
     href: "https://docs.cdrplatform.com/",
     category: {
       name: "cdrplatform.com",
@@ -30,7 +30,7 @@ const CardList = () => {
       <div className="absolute inset-0">
         <div className="h-1/3 bg-white sm:h-2/3" />
       </div>
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative mx-auto container sm:px-2 lg:px-8 xl:px-12 ">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Our projects
@@ -67,10 +67,19 @@ const CardList = () => {
                     </p>
                   </a>
                 </div>
-                <p className="text-sm font-medium text-emerald-600">
-                  <a href={post.category.href} className="hover:underline">
+                <p className="mt-4 text-sm text-right font-medium text-emerald-600 group">
+                  <a
+                    href={post.category.href}
+                    className="group-hover:underline"
+                  >
                     {post.category.name}
                   </a>
+                  <span
+                    className=" ml-1 group-hover:ml-4 group-hover:-mr-3 no-underline ease-out duration-300"
+                    aria-hidden="true"
+                  >
+                    &rarr;
+                  </span>
                 </p>
               </div>
             </div>

@@ -19,16 +19,16 @@ const Navigation = () => {
       className={clsx(
         !mobileMenuOpen &&
           "sticky top-0 z-50 bg-white shadow-md shadow-slate-900/5 w-full",
-        "px-4 py-5"
+        "py-5"
       )}
     >
       <nav
-        className="flex h-9 items-center justify-between mx-auto max-w-7xl lg:px-8"
+        className="flex h-9 items-center justify-between mx-auto container sm:px-2 lg:px-8 xl:px-12 py-5"
         aria-label="Global"
       >
         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
           <a href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Climacrux LLC</span>
             <ClimacruxLogo className="h-8" />
           </a>
         </div>
