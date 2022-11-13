@@ -71,7 +71,7 @@ const Layout = ({ children, title, tableOfContents }) => {
           <article>
             {title && (
               <header className="mb-9 space-y-1">
-                <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">
+                <h1 className="font-display text-3xl tracking-tight text-slate-900">
                   {title}
                 </h1>
               </header>
@@ -85,7 +85,7 @@ const Layout = ({ children, title, tableOfContents }) => {
               <>
                 <h2
                   id="on-this-page-title"
-                  className="font-display text-sm font-medium text-slate-900 dark:text-white"
+                  className="font-display text-sm font-medium text-slate-900"
                 >
                   On this page
                 </h2>
@@ -98,7 +98,7 @@ const Layout = ({ children, title, tableOfContents }) => {
                           className={clsx(
                             isActive(section)
                               ? "text-emerald-500"
-                              : "font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
+                              : "font-normal text-slate-500 hover:text-slate-700"
                           )}
                         >
                           {section.title}
@@ -107,7 +107,7 @@ const Layout = ({ children, title, tableOfContents }) => {
                       {section.children.length > 0 && (
                         <ol
                           role="list"
-                          className="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-400"
+                          className="mt-2 space-y-3 pl-5 text-slate-500"
                         >
                           {section.children.map((subSection) => (
                             <li key={subSection.id}>
@@ -116,7 +116,7 @@ const Layout = ({ children, title, tableOfContents }) => {
                                 className={
                                   isActive(subSection)
                                     ? "text-emerald-500"
-                                    : "hover:text-slate-600 dark:hover:text-slate-300"
+                                    : "hover:text-slate-600"
                                 }
                               >
                                 {subSection.title}
