@@ -1,8 +1,98 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { NextPage } from "next";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { ReactElement, ReactNode } from "react";
+import { slugifyWithCounter } from "@sindresorhus/slugify";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import Layout from "@/components/Layout";
+
+import "../styles/globals.css";
+
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+function getNodeText(node: any): string {
+  let text = "";
+  for (let child of node.children ?? []) {
+    if (typeof child === "string") {
+      text += child;
+    }
+    text += getNodeText(child);
+  }
+  return text;
 }
 
-export default MyApp
+function collectHeadings(nodes: any[], slugify = slugifyWithCounter()): any[] {
+  let sections = [];
+
+  for (let node of nodes) {
+    if (node.name === "h2" || node.name === "h3") {
+      let title = getNodeText(node);
+      if (title) {
+        let id = slugify(title);
+        node.attributes.id = id;
+        if (node.name === "h3") {
+          if (!sections[sections.length - 1]) {
+            throw new Error(
+              "Cannot add `h3` to table of contents without a preceding `h2`"
+            );
+          }
+          sections[sections.length - 1].children.push({
+            ...node.attributes,
+            title,
+          });
+        } else {
+          sections.push({ ...node.attributes, title, children: [] });
+        }
+      }
+    }
+
+    sections.push(...collectHeadings(node.children ?? [], slugify));
+  }
+
+  return sections;
+}
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  let title = pageProps.markdoc?.frontmatter.title;
+
+  let pageTitle =
+    pageProps.markdoc?.frontmatter.pageTitle ||
+    `${pageProps.markdoc?.frontmatter.title} - Docs`;
+
+  let description = pageProps.markdoc?.frontmatter.description;
+
+  let tableOfContents = pageProps.markdoc?.content
+    ? collectHeadings(pageProps.markdoc.content.children)
+    : [];
+
+  // Use the layout defined at the page level, if available
+  // https://nextjs.org/docs/basic-features/layouts
+  const getLayout =
+    Component.getLayout ??
+    ((page) => {
+      return (
+        <Layout title={title} tableOfContents={tableOfContents}>
+          <Component {...pageProps} />
+        </Layout>
+      );
+    });
+
+  return (
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+        {description && <meta name="description" content={description} />}
+      </Head>
+
+      {getLayout(<Component {...pageProps} />)}
+    </>
+  );
+}
+
+export default MyApp;

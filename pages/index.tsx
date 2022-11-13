@@ -1,18 +1,29 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Layout from '../components/Layout'
+import Head from "next/head";
+import { ReactElement } from "react";
 
-const Home: NextPage = ({Component, pageProps}) => {
-  return (<>
-    <Head>
-      <title>Climacrux</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  </>
-  )
-}
+import { NextPageWithLayout } from "./_app";
+import CardList from "@/components/CardList";
+import HeroSection from "@/components/HeroSection";
+import Footer from "@/components/Footer";
 
-export default Home
+const Home: NextPageWithLayout = () => {
+  return (
+    <>
+      <Head>
+        <title>Climacrux</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <HeroSection></HeroSection>
+      <CardList></CardList>
+      <Footer></Footer>
+    </>
+  );
+};
+
+const getLayout = (page: ReactElement) => {
+  return <>{page}</>;
+};
+
+Home.getLayout = getLayout;
+
+export default Home;

@@ -1,21 +1,11 @@
-import { useRouter } from "next/router";
 import Prose from "./Prose";
-import Footer from "../components/Footer";
-import CardList from "../components/CardList";
-import HeroSection from "../components/HeroSection";
 
-const Layout = ({ children }) => {
-  let router = useRouter();
-  let isHomePage = router.pathname === "/";
+import Footer from "@/components/Footer";
+
+const Layout = ({ children, title, tableOfContents }) => {
   return (
     <>
-      {isHomePage && (
-        <>
-          <HeroSection></HeroSection>
-          <CardList></CardList>
-        </>
-      )}
-      {!isHomePage && <Prose>{children}</Prose>}
+      <Prose>{children}</Prose>
       <Footer></Footer>
     </>
   );
