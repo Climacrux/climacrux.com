@@ -69,12 +69,14 @@ const Footer = () => {
               <br />
               Switzerland
               <br />
-              <a
-                className="text-base text-gray-500 hover:text-gray-900"
+            </p>
+            <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
+              <Link
+                className="font-semibold no-underline"
                 href="mailto:hello@climacrux.com"
               >
                 hello@climacrux.com
-              </a>
+              </Link>
             </p>
           </div>
           <div>
@@ -83,20 +85,24 @@ const Footer = () => {
             </h3>
             <ul>
               <li>
-                <Link
-                  className="text-base text-gray-500 hover:text-gray-900"
-                  href="/terms-and-conditions"
-                >
-                  Terms and Conditions
-                </Link>
+                <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
+                  <Link
+                    className="font-semibold no-underline"
+                    href="/privacy-policy"
+                  >
+                    Privacy policy
+                  </Link>
+                </p>
               </li>
               <li>
-                <Link
-                  className="text-base text-gray-500 hover:text-gray-900"
-                  href="/privacy-policy"
-                >
-                  Privacy Policy
-                </Link>
+                <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
+                  <Link
+                    className="font-semibold no-underline"
+                    href="/terms-and-conditions"
+                  >
+                    Terms and conditions
+                  </Link>
+                </p>
               </li>
             </ul>
           </div>
@@ -114,7 +120,7 @@ const Footer = () => {
             By signing up you agree to the processing of your data as specified
             in our{" "}
             <Link className="font-semibold no-underline" href="/privacy-policy">
-              Privacy Policy{" "}
+              privacy policy
             </Link>{" "}
             including - but not limited to - receiving the Climacrux LLC
             newsletter.
