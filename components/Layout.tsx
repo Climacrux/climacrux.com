@@ -1,5 +1,4 @@
 import Prose from "./Prose";
-
 import Footer from "@/components/Footer";
 
 const Layout = ({ children, title, tableOfContents }) => {

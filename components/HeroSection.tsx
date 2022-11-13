@@ -1,6 +1,6 @@
 import Navigation from "./Navigation";
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
     <div className="isolate bg-white">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -109,4 +109,6 @@ export default function HeroSection() {
       </main>
     </div>
   );
-}
+};
+
+export default HeroSection;
