@@ -1,6 +1,7 @@
 const posts = [
   {
     title: "Carbon Removed",
+    subtitle: "CO₂ removal for individuals",
     href: "https://carbonremoved.com/",
     category: { name: "carbonremoved.com", href: "https://carbonremoved.com/" },
     description:
@@ -10,6 +11,7 @@ const posts = [
   },
   {
     title: "CDR Platform API",
+    subtitle: "CO₂ removal as a service",
     href: "https://docs.cdrplatform.com/",
     category: {
       name: "cdrplatform.com",
@@ -53,11 +55,9 @@ const CardList = () => {
               </div>
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-indigo-600">
-                    <a href={post.category.href} className="hover:underline">
-                      {post.category.name}
-                    </a>
-                  </p>
+                  <span className="inline-flex items-center rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800">
+                    {post.subtitle}
+                  </span>
                   <a href={post.href} className="mt-2 block">
                     <p className="text-xl font-semibold text-gray-900">
                       {post.title}
@@ -67,6 +67,11 @@ const CardList = () => {
                     </p>
                   </a>
                 </div>
+                <p className="text-sm font-medium text-emerald-600">
+                  <a href={post.category.href} className="hover:underline">
+                    {post.category.name}
+                  </a>
+                </p>
               </div>
             </div>
           ))}
