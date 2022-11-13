@@ -6,6 +6,7 @@ import CardList from "@/components/CardList";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import ContactForm from "@/components/ContactForm";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPageWithLayout = () => {
       <Navigation></Navigation>
       <HeroSection></HeroSection>
       <CardList></CardList>
+      <ContactForm></ContactForm>
       <Footer></Footer>
     </>
   );
