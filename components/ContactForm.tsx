@@ -8,10 +8,13 @@ const ContactForm = () => {
         <div className="pt-16 pb-4 px-4 sm:px-6 lg:pt-20 lg:px-8 xl:pl-12">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
             <div className="lg:col-span-4">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+              <h2
+                className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+                id="contact"
+              >
                 Get in touch
               </h2>
-              <p className="prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.emerald.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
+              <p className="mt-3 sm:mt-4 text-xl prose text-slate-400 prose-a:font-semibold prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.emerald.300))] hover:prose-a:[--tw-prose-underline-size:6px]">
                 If you want to reach out to us please use the form below or
                 email us at{" "}
                 <Link

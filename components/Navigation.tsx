@@ -1,6 +1,6 @@
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ClimacruxLogo from "../images/climacrux_logo_gray.svg";
 import clsx from "clsx";
 
@@ -14,11 +14,30 @@ const navigation = [
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const [scrollAtTop, setScrollAtTop] = useState(true);
+
+  useEffect(() => {
+    const scrollListener = () => {
+      var scrolled = document?.scrollingElement?.scrollTop;
+      if (scrolled && scrolled >= 120) {
+        if (scrollAtTop) setScrollAtTop(false);
+      } else {
+        if (!scrollAtTop) setScrollAtTop(true);
+      }
+    };
+
+    document.addEventListener("scroll", scrollListener);
+    return () => {
+      document.removeEventListener("scroll", scrollListener);
+    };
+  }, [scrollAtTop]);
+
   return (
     <header
       className={clsx(
+        !scrollAtTop && "bg-white shadow-md shadow-slate-900/5",
         !mobileMenuOpen &&
-          "sticky top-0 z-50 bg-white shadow-md shadow-slate-900/5 w-full",
+          "sticky top-0 z-50 transparent w-full ease-in-out duration-300",
         "py-5"
       )}
     >

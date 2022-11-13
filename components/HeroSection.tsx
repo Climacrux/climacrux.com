@@ -34,17 +34,6 @@ const HeroSection = () => {
         <div className="relative px-6 lg:px-8">
           <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
             <div>
-              <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  <span className="text-gray-600">
-                    Announcing our next round of funding.{" "}
-                    <a href="#" className="font-semibold text-emerald-600">
-                      <span className="absolute inset-0" aria-hidden="true" />
-                      Read more <span aria-hidden="true">&rarr;</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
               <div>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
                   Imagine a net‑zero future
@@ -56,22 +45,22 @@ const HeroSection = () => {
                 </p>
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                   <a
-                    href="#"
-                    className="inline-block rounded-lg bg-emerald-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-emerald-600 hover:bg-emerald-700 hover:ring-emerald-700"
+                    href="#projects"
+                    className="group inline-block rounded-lg bg-emerald-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-emerald-600 hover:bg-emerald-700 hover:ring-emerald-700"
                   >
-                    Get started
-                    <span className="text-emerald-200" aria-hidden="true">
+                    Our Projects
+                    <span
+                      className="text-emerald-200 ml-2 ease-in duration-200 group-hover:ml-4"
+                      aria-hidden="true"
+                    >
                       &rarr;
                     </span>
                   </a>
                   <a
-                    href="#"
-                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                    href="#contact"
+                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-transparent hover:ring-gray-900/20"
                   >
-                    Live demo
-                    <span className="text-gray-400" aria-hidden="true">
-                      &rarr;
-                    </span>
+                    Contact Us
                   </a>
                 </div>
               </div>

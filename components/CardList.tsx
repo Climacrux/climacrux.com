@@ -18,7 +18,7 @@ const posts = [
       href: "https://docs.cdrplatform.com/",
     },
     description:
-      "Reach your net-zero goals by integrating CO₂ removal directly into your business.",
+      "Reach your net-zero goals by integrating CO₂ removal directly into your business. CDR Platform is sustainability building block for software development.",
     imageUrl:
       "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
   },
@@ -31,15 +31,17 @@ const CardList = () => {
         <div className="h-1/3 bg-white sm:h-2/3" />
       </div>
       <div className="relative mx-auto container sm:px-2 lg:px-8 xl:px-12 ">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Our projects
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-            libero labore natus atque, ducimus sed.
-          </p>
-        </div>
+        <h2
+          id="projects"
+          className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          Our projects
+        </h2>
+        <p className="mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
+          We develop products and services with the goal of accelerating the
+          journey to a sustainable future. Here you find our portfolio of
+          projects guided by our dream of a better world.
+        </p>
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
             <div
@@ -53,9 +55,9 @@ const CardList = () => {
                   alt=""
                 />
               </div>
-              <div className="flex flex-1 flex-col justify-between bg-white p-6">
+              <div className="group flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
-                  <span className="inline-flex items-center rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800">
+                  <span className="inline-flex items-center rounded-full bg-purple-100 px-4 py-0.5 text-xs font-medium text-purple-800">
                     {post.subtitle}
                   </span>
                   <a href={post.href} className="mt-2 block">
@@ -67,7 +69,7 @@ const CardList = () => {
                     </p>
                   </a>
                 </div>
-                <p className="mt-4 text-sm text-right font-medium text-emerald-600 group">
+                <p className="mt-4 text-sm text-right font-medium text-emerald-600">
                   <a
                     href={post.category.href}
                     className="group-hover:underline"
@@ -75,7 +77,7 @@ const CardList = () => {
                     {post.category.name}
                   </a>
                   <span
-                    className=" ml-1 group-hover:ml-4 group-hover:-mr-3 no-underline ease-out duration-300"
+                    className=" ml-2 group-hover:ml-5 group-hover:-mr-3 no-underline ease-out duration-300"
                     aria-hidden="true"
                   >
                     &rarr;
