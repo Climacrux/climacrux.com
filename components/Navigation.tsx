@@ -5,10 +5,10 @@ import ClimacruxLogo from "../images/climacrux_logo_gray.svg";
 import clsx from "clsx";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  // { name: "Product", href: "#" },
+  // { name: "Features", href: "#" },
+  // { name: "Marketplace", href: "#" },
+  // { name: "Company", href: "#" },
 ];
 
 const Navigation = () => {
@@ -23,7 +23,7 @@ const Navigation = () => {
       )}
     >
       <nav
-        className="flex h-9 items-center justify-between mx-auto max-w-7xl"
+        className="flex h-9 items-center justify-between mx-auto max-w-7xl lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
@@ -33,14 +33,14 @@ const Navigation = () => {
           </a>
         </div>
         <div className="flex lg:hidden">
-          <button
+          {/* <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
+          </button> */}
         </div>
         <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
           {navigation.map((item) => (
@@ -53,14 +53,14 @@ const Navigation = () => {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+        {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
           <a
             href="#"
             className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
           >
             Log in
           </a>
-        </div>
+        </div> */}
       </nav>
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Panel
@@ -98,14 +98,14 @@ const Navigation = () => {
                   </a>
                 ))}
               </div>
-              <div className="py-6">
+              {/* <div className="py-6">
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                 >
                   Log in
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </Dialog.Panel>
