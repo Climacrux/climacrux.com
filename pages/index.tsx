@@ -14,6 +14,12 @@ const Home: NextPageWithLayout = () => {
       <Head>
         <title>Climacrux</title>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          defer
+          data-api="/api/event"
+          data-domain="climacrux.com"
+          src="https://plausible.climacrux.com/js/plausible.js"
+        ></script>
       </Head>
       <Navigation></Navigation>
       <HeroSection></HeroSection>
