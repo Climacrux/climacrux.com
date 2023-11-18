@@ -6,8 +6,7 @@ const posts = [
     category: { name: "carbonremoved.com", href: "https://carbonremoved.com/" },
     description:
       "A negative emissions broker. Packaging carbon removal into simple subscriptions and one-time purchases.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+    imageUrl: "/img/logo_carbon_removed_dark_blue_no_bg--600px.webp",
   },
   {
     title: "CDR Platform",
@@ -19,8 +18,7 @@ const posts = [
     },
     description:
       "Reach your net-zero goals by integrating CO₂ removal directly into your business. CDR Platform is sustainability building block for software development.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+    imageUrl: "/img/cdr-platform-horizontal.png",
   },
   {
     title: "Climacrux",
@@ -32,8 +30,7 @@ const posts = [
     },
     description:
       "Boutique CO₂ removal for family offices. Fully custom portfolios and carbon removal education to build sustainability for future generations.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+    imageUrl: "/img/logo_climacrux_dark_blue_320x137--Google.webp",
   },
   //   {
   //     title: "Cogmi",
@@ -88,7 +85,7 @@ const CardList = () => {
             >
               <div className="flex-shrink-0">
                 <img
-                  className="h-48 w-full object-cover"
+                  className="h-48 w-1/2 mx-auto object-contain"
                   src={post.imageUrl}
                   alt=""
                 />
