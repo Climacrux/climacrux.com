@@ -36,19 +36,18 @@ const HeroSection = () => {
             <div>
               <div>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                  Imagine a net‑zero future
+                  Sustainable, respectful software.
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                  Action needs to be taken today to transition to a more
-                  sustainable, net-zero emissions society. Climacrux creates
-                  products and services to accelerate this process.
+                  Climacrux develops products and services aimed at improving
+                  your quality of life.
                 </p>
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                   <a
                     href="#projects"
                     className="group inline-block rounded-lg bg-emerald-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-emerald-600 hover:bg-emerald-700 hover:ring-emerald-700"
                   >
-                    Our Projects
+                    Discover our projects
                     <span
                       className="text-emerald-200 ml-2 ease-in duration-200 group-hover:ml-4"
                       aria-hidden="true"

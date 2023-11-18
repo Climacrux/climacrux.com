@@ -22,6 +22,44 @@ const posts = [
     imageUrl:
       "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
   },
+  {
+    title: "Climacrux",
+    subtitle: "Boutique CO₂ removal",
+    href: "mailto://hello@climacrux.com",
+    category: {
+      name: "Contact us",
+      href: "mailto://hello@climacrux.com",
+    },
+    description:
+      "Boutique CO₂ removal for family offices. Fully custom portfolios and carbon removal education to build sustainability for future generations.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+  },
+  //   {
+  //     title: "Cogmi",
+  //     subtitle: "Smarter reading recommendations",
+  //     href: "https://cogmi.net/",
+  //     category: {
+  //       name: "cogmi.net",
+  //       href: "https://cogmi.net/",
+  //     },
+  //     description:
+  //       "Creating a network of online content  connected by similarity and relevance. Cogmi is a privacy respecting, recommendation engine that helps you discover content related to what you're reading.",
+  //     imageUrl:
+  //       "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+  //   },
+  //   {
+  //     title: "Not For Large Profit",
+  //     subtitle: "Curbing corporate greed",
+  //     href: "https://notforlargeprofit.org/",
+  //     category: {
+  //       name: "notforlargeprofit.org",
+  //       href: "https://notforlargeprofit.org/",
+  //     },
+  //     description: "A set of principles for companies to follow to help ",
+  //     imageUrl:
+  //       "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+  //   },
 ];
 
 const CardList = () => {
